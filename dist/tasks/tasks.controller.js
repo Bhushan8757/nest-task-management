@@ -72,6 +72,7 @@ __decorate([
 ], TasksController.prototype, "updateTaskStatus", null);
 __decorate([
     common_1.Post(),
+    common_1.UsePipes(common_1.ValidationPipe),
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_task_dto_1.CreateTaskDto]),
