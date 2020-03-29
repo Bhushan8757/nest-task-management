@@ -38,16 +38,16 @@ export class TasksService {
 		return task;
 	}
 
-	// createTask(title: string, description: string): Task {
-	//   const task: Task = {
-	//     id: uuid(),
-	//     title,
-	//     description,
-	//     status: TaskStatus.OPEN,
-	//   };
-	//   this.tasks.push(task);
-	//   return task;
-	// }
+	/* createTask(title: string, description: string): Task {
+	  const task: Task = {
+	    id: uuid(),
+	    title,
+	    description,
+	    status: TaskStatus.OPEN,
+	  };
+	  this.tasks.push(task);
+	  return task;
+	} */
 
 	createTask(createTaskDto: CreateTaskDto) {
 		const { title, description } = createTaskDto;

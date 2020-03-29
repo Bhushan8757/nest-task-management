@@ -914,7 +914,7 @@
         "signature": "62d11433a9fc13298be394050204cc89b795814d316eda23e928ccd2fbb1a947"
       },
       "../src/tasks/tasks.service.ts": {
-        "version": "1305272a52806a5154aeadcd74606bab0f9145bc03c3deab4112d6b3fa8151fc",
+        "version": "9ec7ab2861220531583e30f3c317f0be23515feaffc42a8a6b872f721714ea56",
         "signature": "164ebe05a2b52d5541d902ed0b06d1d34089b7a0c8d669899ab06e683686e5a4"
       },
       "../src/tasks/tasks.controller.ts": {
