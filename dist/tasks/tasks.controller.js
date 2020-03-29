@@ -16,12 +16,18 @@ const common_1 = require("@nestjs/common");
 const tasks_service_1 = require("./tasks.service");
 const tasks_model_1 = require("./tasks.model");
 const create_task_dto_1 = require("./dto/create-task.dto");
+const get_task_filter_dto_1 = require("./dto/get-task-filter.dto");
 let TasksController = class TasksController {
     constructor(tasksService) {
         this.tasksService = tasksService;
     }
-    getAllTasks() {
-        return this.tasksService.getAllTasks();
+    getTasks(filterDto) {
+        if (Object.keys(filterDto).length) {
+            return this.tasksService.getTaskWithFilter(filterDto);
+        }
+        else {
+            return this.tasksService.getAllTasks();
+        }
     }
     getTaskById(id) {
         return this.tasksService.getTaskById(id);
@@ -38,10 +44,11 @@ let TasksController = class TasksController {
 };
 __decorate([
     common_1.Get(),
+    __param(0, common_1.Query()),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", []),
+    __metadata("design:paramtypes", [get_task_filter_dto_1.GetClassFilterDto]),
     __metadata("design:returntype", Array)
-], TasksController.prototype, "getAllTasks", null);
+], TasksController.prototype, "getTasks", null);
 __decorate([
     common_1.Get('/:id'),
     __param(0, common_1.Param('id')),
@@ -58,8 +65,7 @@ __decorate([
 ], TasksController.prototype, "deleteTaskById", null);
 __decorate([
     common_1.Patch('/:id/status'),
-    __param(0, common_1.Param('id')),
-    __param(1, common_1.Body('status')),
+    __param(0, common_1.Param('id')), __param(1, common_1.Body('status')),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", Object)

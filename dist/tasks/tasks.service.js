@@ -17,10 +17,21 @@ let TasksService = class TasksService {
         return this.tasks;
     }
     getTaskById(id) {
-        return this.tasks.find(task => task.id === id);
+        return this.tasks.find((task) => task.id === id);
+    }
+    getTaskWithFilter(filterDto) {
+        const { status, search } = filterDto;
+        let tasks = this.getAllTasks();
+        if (status) {
+            tasks = tasks.filter((task) => task.status === status);
+        }
+        if (search) {
+            tasks = tasks.filter((task) => task.title.includes(search) || task.description.includes(search));
+        }
+        return tasks;
     }
     deleteTaskById(id) {
-        this.tasks = this.tasks.filter(task => task.id !== id);
+        this.tasks = this.tasks.filter((task) => task.id !== id);
     }
     updateTaskStatus(id, status) {
         const task = this.getTaskById(id);
@@ -33,7 +44,7 @@ let TasksService = class TasksService {
             id: uuid(),
             title,
             description,
-            status: tasks_model_1.TaskStatus.OPEN,
+            status: tasks_model_1.TaskStatus.OPEN
         };
         this.tasks.push(task);
         return task;

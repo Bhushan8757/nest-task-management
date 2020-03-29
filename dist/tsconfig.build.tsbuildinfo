@@ -906,16 +906,20 @@
         "signature": "1f1972745fd56e4323782ccdc86730f1ae6b07fc29012c7c2a2872104f6d6fca"
       },
       "../src/tasks/dto/create-task.dto.ts": {
-        "version": "ae1bacdc00551057515861f2a5db26654f1d654a8ceef341659c1a295274fa5c",
+        "version": "b5265c691bbba95b6821ebf527c4c09b944230d7087234605fe7cea69b6b20a3",
         "signature": "b1d26f03607e121c7317f85d8725d2562ea98694c85f768a3db85be2488756e3"
       },
+      "../src/tasks/dto/get-task-filter.dto.ts": {
+        "version": "3e57074d75708c2a4556b713d93dcf8eea716a8e26defe952e5fcd3b69c3416b",
+        "signature": "62d11433a9fc13298be394050204cc89b795814d316eda23e928ccd2fbb1a947"
+      },
       "../src/tasks/tasks.service.ts": {
-        "version": "b5cc0f297a693cc63e43fc6df006d64475fb1d274e9f60ef43859830a0bdc997",
-        "signature": "a5bdfdfee71476b60a23e49de67a05852715be752f445e800034e666a19691c4"
+        "version": "1305272a52806a5154aeadcd74606bab0f9145bc03c3deab4112d6b3fa8151fc",
+        "signature": "164ebe05a2b52d5541d902ed0b06d1d34089b7a0c8d669899ab06e683686e5a4"
       },
       "../src/tasks/tasks.controller.ts": {
-        "version": "90e049ab85510c713ff71e0d5f756d941fbbeff58b5f4f035a2a3fb8ef4af300",
-        "signature": "0ed0b9e46d6a289a2e3e1a07a28687b42cd3e4a6890882b4009eba5a0ee4925b"
+        "version": "765ab1b838f13969035fdc6da69e52faedeffef5ee35e5f14fadaaa641ad6dd8",
+        "signature": "89ea33315e7910827d738265172658557fc0e3ac39785f38437102b7f4a3984c"
       },
       "../src/tasks/tasks.module.ts": {
         "version": "30de411d9b63111d4022da21c72fb35672ef073897a3cddd670ce20c1431659d",
@@ -3248,10 +3252,18 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/tasks/dto/get-task-filter.dto.ts": [
+        "../src/tasks/tasks.model.ts",
+        "../node_modules/@types/node/fs.d.ts",
+        "../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../node_modules/@types/node/util.d.ts",
+        "../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../src/tasks/tasks.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/tasks/tasks.model.ts",
         "../src/tasks/dto/create-task.dto.ts",
+        "../src/tasks/dto/get-task-filter.dto.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -3262,6 +3274,7 @@
         "../src/tasks/tasks.service.ts",
         "../src/tasks/tasks.model.ts",
         "../src/tasks/dto/create-task.dto.ts",
+        "../src/tasks/dto/get-task-filter.dto.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -6083,12 +6096,17 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../src/tasks/dto/get-task-filter.dto.ts": [
+        "../src/tasks/tasks.model.ts"
+      ],
       "../src/tasks/tasks.service.ts": [
         "../src/tasks/tasks.model.ts",
+        "../src/tasks/dto/get-task-filter.dto.ts",
         "../src/tasks/dto/create-task.dto.ts"
       ],
       "../src/tasks/tasks.controller.ts": [
         "../src/tasks/tasks.service.ts",
+        "../src/tasks/dto/get-task-filter.dto.ts",
         "../src/tasks/tasks.model.ts",
         "../src/tasks/dto/create-task.dto.ts"
       ],
@@ -7322,7 +7340,8 @@
       "../node_modules/@nestjs/common/index.d.ts",
       "../src/tasks/tasks.model.ts",
       "../src/tasks/dto/create-task.dto.ts",
-      "../src/tasks/tasks.service.ts",
+      "../src/tasks/dto/get-task-filter.dto.ts",
+      "../src/tasks/tasks.controller.ts",
       "../src/tasks/tasks.module.ts",
       "../src/app.module.ts",
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts",
@@ -7452,7 +7471,7 @@
       "../node_modules/@types/webpack/index.d.ts",
       "../node_modules/@types/yargs-parser/index.d.ts",
       "../node_modules/@types/yargs/index.d.ts",
-      "../src/tasks/tasks.controller.ts"
+      "../src/tasks/tasks.service.ts"
     ]
   },
   "version": "3.8.3"
